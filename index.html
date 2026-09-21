@@ -1,324 +1,45 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Archetypics Creative Lab</title>
-    <meta name="description" content="Archetypics Creative Lab — Sobre jogos e pessoas">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            min-height: 100vh;
-            background: #f3efe8;
-            color: #3b302d;
-            font-family: Georgia, "Times New Roman", serif;
-        }
-
-        /* =========================
-           CABEÇALHO FIXO
-           ========================= */
-
-        header {
-            width: 100%;
-            height: 180px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-
-            padding: 40px 50px;
-
-            background: #f3efe8;
-        }
-
-        /* =========================
-           LOGO
-           ========================= */
-
-        .logo {
-            display: block;
-        }
-
-        .logo img {
-            width: 100px;
-            height: 100px;
-            display: block;
-            object-fit: contain;
-        }
-
-        /* =========================
-           NAVEGAÇÃO
-           ========================= */
-
-        nav {
-            display: flex;
-            gap: 48px;
-
-            padding-top: 38px;
-            padding-right: 10px;
-        }
-
-        nav a {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-
-            color: #6d625e;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            color: #722f3f;
-        }
-
-        /* =========================
-           CONTEÚDO PRINCIPAL
-           ========================= */
-
-        main {
-            min-height: 100vh;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            text-align: center;
-
-            /*
-             Espaço para que o conteúdo
-             não fique escondido pelo cabeçalho.
-            */
-            padding: 300px 30px 60px;
-        }
-
-        .brand {
-            font-size: clamp(2.4rem, 6vw, 4.2rem);
-            letter-spacing: 0.08em;
-            font-weight: normal;
-
-            color: #722f3f;
-
-            margin-bottom: 14px;
-        }
-
-        .subtitle {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-
-            color: #6d625e;
-
-            margin-bottom: 70px;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: normal;
-
-            margin-bottom: 28px;
-        }
-
-        .intro {
-            max-width: 900px;
-
-            font-size: 1.15rem;
-            line-height: 1.8;
-
-            color: #5c514d;
-
-            margin-bottom: 50px;
-        }
-
-        /* =========================
-           EM CONSTRUÇÃO
-           ========================= */
-
-        .construction {
-            display: inline-block;
-
-            border-top: 1px solid #722f3f;
-            border-bottom: 1px solid #722f3f;
-
-            padding: 14px 34px;
-
-            color: #722f3f;
-
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-
-            margin-bottom: 62px;
-        }
-
-        /* =========================
-           INSTAGRAM
-           ========================= */
-
-        .instagram {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.95rem;
-
-            color: #6d625e;
-        }
-
-        .instagram a {
-            color: #722f3f;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .instagram a:hover {
-            text-decoration: underline;
-        }
-
-        /* =========================
-           RODAPÉ
-           ========================= */
-
-        footer {
-            margin-top: 60px;
-
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 0.05em;
-
-            color: #8b817c;
-        }
-
-        /* =========================
-           CELULAR / TABLET
-           ========================= */
-
-        @media (max-width: 700px) {
-
-            header {
-                height: 135px;
-
-                padding: 25px;
-            }
-
-            .logo img {
-                width: 70px;
-                height: 70px;
-            }
-
-            nav {
-                gap: 18px;
-
-                padding-top: 27px;
-                padding-right: 0;
-            }
-
-            nav a {
-                font-size: 0.7rem;
-                letter-spacing: 0.12em;
-            }
-
-            main {
-                min-height: 100vh;
-
-                padding: 210px 20px 40px;
-            }
-
-            .brand {
-                font-size: 2.4rem;
-            }
-
-            .subtitle {
-                margin-bottom: 50px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .intro {
-                font-size: 1rem;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- =========================
-         CABEÇALHO
-         ========================= -->
-
-    <header>
-
-        <!-- Logo = botão Home -->
-        <a href="index.html" class="logo" aria-label="Página principal">
-            <img src="Logomarca%20vinho.png" alt="Archetypics">
+---
+layout: default
+title: Principal
+description: Archetypics Creative Lab — Sobre jogos e pessoas
+---
+
+<main>
+
+    <div class="brand">
+        Archetypics
+    </div>
+
+    <div class="subtitle">
+        Creative Lab
+    </div>
+
+    <h1>
+        Sobre jogos e pessoas
+    </h1>
+
+    <p class="intro">
+        Um laboratório independente dedicado à criação de jogos,
+        ideias e experiências.
+    </p>
+
+    <div class="construction">
+        Em construção
+    </div>
+
+    <div class="instagram">
+        Acompanhe a Archetypics no
+        <a
+            href="https://www.instagram.com/archetypics/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Instagram
         </a>
+    </div>
 
-        <!-- Menu principal -->
-        <nav>
-            <a href="index.html">Principal</a>
-            <a href="jogos.html">Jogos</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <footer>
+        © 2026 Archetypics Creative Lab
+    </footer>
 
-    </header>
-
-
-    <!-- =========================
-         PÁGINA PRINCIPAL
-         ========================= -->
-
-    <main>
-
-        <div class="brand">
-            Archetypics
-        </div>
-
-        <div class="subtitle">
-            Creative Lab
-        </div>
-
-        <h1>
-            Sobre jogos e pessoas
-        </h1>
-
-        <p class="intro">
-            Um laboratório independente dedicado à criação de jogos,
-            ideias e experiências.
-        </p>
-
-        <div class="construction">
-            Em construção
-        </div>
-
-        <div class="instagram">
-            Acompanhe a Archetypics no
-            <a
-                href="https://www.instagram.com/archetypics/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Instagram
-            </a>
-        </div>
-
-        <footer>
-            © 2026 Archetypics Creative Lab
-        </footer>
-
-    </main>
-
-</body>
-</html>
+</main>
