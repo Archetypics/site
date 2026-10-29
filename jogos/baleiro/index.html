@@ -1,0 +1,323 @@
+---
+layout: default
+title: Baleiro
+description: Baleiro — um jogo de cartas da Archetypics Creative Lab.
+permalink: /jogos/baleiro/
+---
+
+<style>
+/* Estilos específicos da página Baleiro; o CSS compartilhado continua intacto. */
+body:has(.baleiro-page) header {
+    height: 96px;
+    padding: 14px 34px;
+    align-items: center;
+}
+body:has(.baleiro-page) .logo img {
+    width: 58px;
+    height: 58px;
+}
+body:has(.baleiro-page) nav {
+    padding-top: 0;
+    gap: 38px;
+}
+.baleiro-page {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 132px 34px 76px;
+    color: #463b36;
+}
+.baleiro-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+    align-items: center;
+    gap: clamp(32px, 5vw, 78px);
+    min-height: 500px;
+}
+.baleiro-cover-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+.baleiro-cover {
+    display: block;
+    width: min(100%, 540px);
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+.baleiro-copy {
+    padding: 18px 0;
+}
+.baleiro-kicker {
+    margin: 0 0 12px;
+    color: #8a7b70;
+    font-size: .78rem;
+    letter-spacing: .19em;
+    text-transform: uppercase;
+}
+.baleiro-title {
+    margin: 0 0 22px;
+    color: #722f3f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.7rem, 5vw, 4.7rem);
+    font-weight: 400;
+    letter-spacing: .055em;
+    line-height: 1.05;
+}
+.baleiro-lead {
+    max-width: 490px;
+    margin: 0 0 28px;
+    color: #6d625e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.17rem;
+    line-height: 1.75;
+}
+.baleiro-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+.baleiro-button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border: 1px solid #722f3f;
+    border-radius: 3px;
+    background: #722f3f;
+    color: #fffaf4;
+    text-decoration: none;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.baleiro-button:hover {
+    background: #5b2331;
+    transform: translateY(-2px);
+}
+.baleiro-button.secondary {
+    background: transparent;
+    color: #722f3f;
+}
+.baleiro-button.secondary:hover {
+    background: #722f3f;
+    color: #fffaf4;
+}
+.baleiro-caption {
+    margin: 17px 0 0;
+    color: #8a7b70;
+    font-size: .85rem;
+    line-height: 1.6;
+}
+.baleiro-divider {
+    height: 1px;
+    margin: 22px 0 0;
+    border: 0;
+    background: #ded5ca;
+}
+.baleiro-section {
+    padding: 60px 0 54px;
+    border-bottom: 1px solid #ded5ca;
+}
+.baleiro-section-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(250px, .9fr);
+    gap: 30px;
+    align-items: end;
+    margin-bottom: 28px;
+}
+.baleiro-eyebrow {
+    margin: 0 0 9px;
+    color: #8a7b70;
+    font-size: .75rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+.baleiro-h2 {
+    margin: 0;
+    color: #722f3f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 3.3vw, 2.65rem);
+    font-weight: 400;
+    line-height: 1.2;
+}
+.baleiro-section-intro {
+    max-width: 520px;
+    margin: 0;
+    color: #6d625e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+.baleiro-resource-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.baleiro-note {
+    margin: 18px 0 0;
+    color: #8a7b70;
+    font-size: .88rem;
+    line-height: 1.65;
+}
+.baleiro-footer-note {
+    padding-top: 30px;
+    color: #8a7b70;
+    font-size: .82rem;
+    line-height: 1.6;
+    text-align: center;
+}
+@media (max-width: 760px) {
+    body:has(.baleiro-page) header {
+        height: 105px;
+        padding: 15px 20px;
+    }
+    body:has(.baleiro-page) .logo img {
+        width: 48px;
+        height: 48px;
+    }
+    body:has(.baleiro-page) nav {
+        gap: 15px;
+        padding-top: 0;
+    }
+    body:has(.baleiro-page) nav a {
+        font-size: .68rem;
+        letter-spacing: .1em;
+    }
+    .baleiro-page {
+        padding: 132px 22px 48px;
+    }
+    .baleiro-hero {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        min-height: auto;
+    }
+    .baleiro-cover {
+        width: min(100%, 430px);
+    }
+    .baleiro-copy {
+        padding: 10px 0 35px;
+        text-align: center;
+    }
+    .baleiro-lead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .baleiro-actions,
+    .baleiro-resource-row {
+        justify-content: center;
+    }
+    .baleiro-section {
+        padding: 42px 0;
+    }
+    .baleiro-section-heading {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .baleiro-button { transition: none; }
+}
+</style>
+
+<main class="baleiro-page">
+    <section class="baleiro-hero" aria-labelledby="baleiro-title">
+        <div class="baleiro-cover-wrap">
+            <img
+                class="baleiro-cover"
+                src="{{ '/assets/jogos/baleiro/capa.jpg' | relative_url }}"
+                alt="Caixa do jogo de cartas Baleiro, com um baleiro de vidro cheio de balas coloridas"
+            >
+        </div>
+
+        <div class="baleiro-copy">
+            <p class="baleiro-kicker">Um jogo de cartas · Archetypics</p>
+            <h1 class="baleiro-title" id="baleiro-title">Baleiro</h1>
+            <p class="baleiro-lead">
+                Organize os sabores, monte suas coleções e encontre a melhor
+                maneira de pontuar neste jogo de cartas ambientado em uma
+                loja de doces.
+            </p>
+            <div class="baleiro-actions">
+                <a class="baleiro-button" href="{{ '/jogos/baleiro/jogar/' | relative_url }}">
+                    Jogue online&nbsp; ↗
+                </a>
+                <a class="baleiro-button secondary" href="#regras-base">
+                    Regras do jogo
+                </a>
+            </div>
+            <p class="baleiro-caption">
+                Jogue diretamente no navegador. O jogo online reúne o modo base
+                e a expansão Tutti-frutti.
+            </p>
+        </div>
+    </section>
+
+    <hr class="baleiro-divider">
+
+    <section class="baleiro-section" id="jogo-base" aria-labelledby="base-title">
+        <div class="baleiro-section-heading">
+            <div>
+                <p class="baleiro-eyebrow">A experiência original</p>
+                <h2 class="baleiro-h2" id="base-title">Jogo base</h2>
+            </div>
+            <p class="baleiro-section-intro">
+                Comece pelo jogo base e descubra como combinar sabores,
+                organizar os compartimentos e aproveitar as oportunidades
+                para fazer mais pontos.
+            </p>
+        </div>
+        <div class="baleiro-resource-row">
+            <a class="baleiro-button" href="{{ '/jogos/baleiro/jogar/' | relative_url }}">
+                Jogue online&nbsp; ↗
+            </a>
+            <a class="baleiro-button secondary" id="regras-base"
+               href="{{ '/assets/jogos/baleiro/manual-baleiro.pdf' | relative_url }}"
+               target="_blank" rel="noopener">
+                Abrir folheto de regras&nbsp; ↗
+            </a>
+        </div>
+        <p class="baleiro-note">
+            O folheto será aberto em uma nova aba, para que você possa consultá-lo
+            e retornar a esta página quando quiser.
+        </p>
+    </section>
+
+    <section class="baleiro-section" id="tutti-frutti" aria-labelledby="tutti-title">
+        <div class="baleiro-section-heading">
+            <div>
+                <p class="baleiro-eyebrow">Uma nova camada de estratégia</p>
+                <h2 class="baleiro-h2" id="tutti-title">Expansão Tutti-frutti</h2>
+            </div>
+            <p class="baleiro-section-intro">
+                A expansão acrescenta as balas Tutti-frutti, que funcionam como
+                coringas e alteram a maneira de organizar e pontuar os
+                compartimentos. As duas modalidades estão disponíveis no mesmo
+                jogo online.
+            </p>
+        </div>
+        <div class="baleiro-resource-row">
+            <a class="baleiro-button" href="{{ '/jogos/baleiro/jogar/' | relative_url }}">
+                Jogue com Tutti-frutti&nbsp; ↗
+            </a>
+            <a class="baleiro-button secondary"
+               href="{{ '/assets/jogos/baleiro/regras-tutti-frutti.pdf' | relative_url }}"
+               target="_blank" rel="noopener">
+                Regras da expansão&nbsp; ↗
+            </a>
+        </div>
+        <p class="baleiro-note">
+            Ao iniciar uma partida online, selecione “Expansão Tutti-frutti”
+            no menu inicial do jogo.
+        </p>
+    </section>
+
+    <div class="baleiro-footer-note">
+        Baleiro · Um jogo da Archetypics Creative Lab
+    </div>
+</main>
